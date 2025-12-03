@@ -16,7 +16,7 @@ class Noticias(models.Model):
     contenido = models.TextField()    
     fecha = models.DateTimeField(default=timezone.now)#esto setea la fecha
     #lo de abajo no se hace pero se da como ejemplo en clase:
-    # imagen = models.ImageField(upload_to=imagenes)
+    imagen = models.ImageField(upload_to="app_noticias", null=True)
     def __str__(self):
         return self.titulo
 
